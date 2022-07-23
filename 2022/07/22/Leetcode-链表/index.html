@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport">
   
-  <title itemprop="name">archive_a: 2022 | chino</title>
+  <title itemprop="name">Leetcode链表-19 | chino</title>
   
     <link rel="shortcut icon" href="/images/favicon.ico">
   
@@ -319,104 +319,200 @@
   </div>
 </header>
 
-      <div class="blank" style="padding-top: 75px;">
-</div>
-<div id="content" class="site-content">
-  <div id="main">
-    <header class="page-header">
-      <h1 class="cat-title">
-      归档</h1>
-      <span class="cat-des">
-        <p>
-        Archives</p>
-      </span>
+      <link rel="stylesheet" type="text/css" href="/css/sharejs.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tocbot/4.4.2/tocbot.css">
+<div class="pattern-center-blank"></div>
+
+  <div class="pattern-center single-center">
+    <!-- 有配图默认渲染第一张 -->
+    <div class="pattern-attachment-img lazyload" style="background-image: url(https://cdn.jsdelivr.net/gh/kafudolly/cdn/img/custom/avater.jpg);" src="https://cdn.jsdelivr.net/gh/kafudolly/cdn/img/loader/orange.progress-bar-stripe-loader.svg" data-src="https://cdn.jsdelivr.net/gh/kafudolly/cdn/img/custom/avater.jpg">
+    </div>
+    <header class="pattern-header single-header">
+      <h1 class="entry-title">
+      Leetcode链表-19</h1>
+      <p class="entry-census">
+        <span>
+          <a href="">
+            <img src="https://cdn.jsdelivr.net/gh/kafudolly/cdn/img/custom/avater.jpg">
+          </a>
+        </span>
+        <span>
+          <a href="">喵哈羊</a>
+        </span>
+        <span class="bull">
+        ·</span>
+        2022-7-22<span class="bull">
+        ·</span>
+      <span id="busuanzi_value_page_pv"></span>次阅读</p>
     </header>
-    <div id="main-part">
-      <article class="art">
-        <div class="art-main">
-          <div class="art-content">
-            <div id="archives">
-              <p style="text-align:right;">
-                [<span id="al_expand_collapse" style="cursor: s-resize;">
-                全部展开/收缩</span>
-              ]</p>
-              
-              
-              
-              
-              
-                
-                <h3 class="al_year">2022年</h3>
-              
-              
-                
-                <ul class="al_mon_list">
-                  <li class="al_li">
-                    <span class="al_mon" style="cursor: s-resize;">
-                      07月(<span id="post-num">
-                      3</span>
-                    篇文章)</span>
-                    <ul class="al_post_list" style="">
-              
-                      <li>
-                        <a href="/2022/07/22/Leetcode-链表/">
-                          <span style="color:#0bf;">
-                          22日16:30:01</span>
-                          Leetcode链表-19
-                        </a>
-                      </li>
-                      
-                    </ul>
-                  </li>
-                </ul>
-              
-              
-              
-              
-              
-              
-                
-                <ul class="al_mon_list">
-                  <li class="al_li">
-                    <span class="al_mon" style="cursor: s-resize;">
-                      03月(<span id="post-num">
-                      3</span>
-                    篇文章)</span>
-                    <ul class="al_post_list" style="">
-              
-                      <li>
-                        <a href="/2022/03/31/序章/">
-                          <span style="color:#0bf;">
-                          31日18:53:01</span>
-                          计网-序章
-                        </a>
-                      </li>
-                      
-              
-              
-              
-              
-              
-                      <li>
-                        <a href="/2022/03/18/Hello/">
-                          <span style="color:#0bf;">
-                          18日18:50:01</span>
-                          Hello
-                        </a>
-                      </li>
-                      
-                    </ul>
-                  </li>
-                </ul>
-              
-              
+  </div>
+
+<div id="content" class="site-content">
+  <div id="primary" class="content-area">
+    <main id="main" class="site-main" role="main">
+      <article id="post-1" class="post-1 post type-post status-publish format-standard has-post-thumbnail hentry category-uncategorized">
+        <div class="toc"></div>
+        <!--<div class="toc-entry-content"><!-- 套嵌目录使用（主要为了支援评论）-->
+        
+        <div class="entry-content">
+          <p>虽然很久以前就说要开始刷力扣，也早就注册了账号，但直到暑假才正式开始刷。最开始写每日一题，写了两天发现自己的算法基础还是太薄弱了，被双指针和DP橄榄（×），于是找了一个力扣题目分类汇总的网站：<a href="https://www.programmercarl.com/" target="_blank" rel="noopener">代码随想录</a>，开始简单的跟着刷一刷。大概会隔一段时间出一次博客谈谈遇到的好玩的题？所以是不定期更新吧。</p>
+<p>那今天就从链表开始吧（感觉数组还可以？不如链表好玩）</p>
+<pre><code class="java">/**
+ * Definition for singly-linked list.
+ * public class ListNode {
+ *     int val;
+ *     ListNode next;
+ *     ListNode() {}
+ *     ListNode(int val) { this.val = val; }
+ *     ListNode(int val, ListNode next) { this.val = val; this.next = next; }
+ * }
+ */
+</code></pre>
+<h4 id="19-删除链表的倒数第-N-个结点"><a href="#19-删除链表的倒数第-N-个结点" class="headerlink" title="19. 删除链表的倒数第 N 个结点"></a>19. 删除链表的倒数第 N 个结点</h4><p><a href="https://leetcode.cn/problems/remove-nth-node-from-end-of-list/" target="_blank" rel="noopener">题目链接</a></p>
+<p>给你一个链表，删除链表的倒数第 <code>n</code> 个结点，并且返回链表的头结点。</p>
+<h5 id="思路"><a href="#思路" class="headerlink" title="思路"></a>思路</h5><p>最容易想到的思路就是，两次遍历，第一次记录链表长度 length，第二次遍历到 length  - n处，删除该处后的节点。</p>
+<pre><code class="java">public ListNode removeNthFromEnd(ListNode head, int n) {
+    int length;
+    ListNode cur = head;
+    for (length = 0; cur != null; length++) {
+        cur = cur.next;
+    }
+    length = length - n;
+    cur = head;
+    if (length == 0) {
+        return cur.next;
+    } 
+    else {
+        for (int i = 1; i &lt; length; i++) {
+            cur = cur.next;
+        }
+        cur.next = cur.next.next;
+        return head;
+    }
+}
+</code></pre>
+<p>但是这道题的题目中提到：</p>
+<blockquote>
+<p><strong>进阶：</strong>你能尝试使用一趟扫描实现吗？</p>
+</blockquote>
+<p>这时候就需要用到双指针了。</p>
+<p>思路：快慢指针均赋值为head，快指针先走n步，随后快慢指针一起走。快指针走到尾节点时，慢指针的下一个节点即为要删除的节点。</p>
+<p>注意：若n = length，快指针走过n步后到达null处，此时则要删除第一个节点，可直接返回<code>head-&gt;next</code>。</p>
+<pre><code class="java">public ListNode removeNthFromEnd(ListNode head, int n) {
+    if (head == null)
+        return null;
+    ListNode cur = head, prev = head;
+    //快指针先走n步
+    for(int i = 0; i &lt; n; i ++){
+        cur = cur.next;
+    }
+    while (cur.next != null){
+        cur = cur.next;
+        prev = prev.next;
+    }
+    if (prev.next == null)
+        return null;
+    else
+        prev.next = prev.next.next;
+    return head;
+}
+</code></pre>
+
+        </div>
+        <!-- .entry-content -->
+        <!-- <div class="single-reward">
+          <div class="reward-open">赏
+            <div class="reward-main">
+              <ul class="reward-row">
+                <li class="alipay-code"><img src="https://cdn.jsdelivr.net/gh/kafudolly/cdn/img/custom/donate/AliPayQR.jpg"></li>
+                <li class="wechat-code"><img src="https://cdn.jsdelivr.net/gh/kafudolly/cdn/img/custom/donate/WeChanQR.jpg"></li>
+              </ul>
             </div>
           </div>
+        </div> -->
+        <!-- <div style="text-align:center; width: 100%" class="social-share share-mobile" data-disabled="diandian, tencent"></div>
+        <footer class="post-footer">
+          <div class="post-lincenses"><a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh" target="_blank" rel="nofollow"><i class="fa fa-creative-commons" aria-hidden="true"></i> 知识共享署名-非商业性使用-相同方式共享 4.0 国际许可协议</a></div>
+          <div class="post-tags">
+          </div>
+          <div class="post-share">
+            <div class="social-share sharehidden share-component"></div>
+            <i class="iconfont show-share icon-forward"></i>
+          </div>
+        </footer>
+      </article> -->
+      <!-- #post-## -->
+      <div class="toc" style="background: none;"></div>
+      <section class="post-squares nextprev">
+        
+        
+          
+            <div class="post-nepre full next">
+          
+            <a href="/2022/03/31/序章/" rel="next">
+              <div class="background">
+                <img class="lazyload" src="https://cdn.jsdelivr.net/gh/kafudolly/cdn/img/loader/orange.progress-bar-stripe-loader.svg" data-src="https://cdn.jsdelivr.net/gh/kafudolly/cdn/img/blog/BC22C742A52490856545E630021D6FDA.png" style="width: 100%; height: 100%; object-fit: cover; pointer-events: none;" onerror="imgError(this,3)" src="https://cdn.jsdelivr.net/gh/kafudolly/cdn/img/blog/BC22C742A52490856545E630021D6FDA.png">
+              </div>
+              <span class="label">
+              Next Post</span>
+              <div class="info">
+                <h3>
+                计网-序章</h3>
+                <hr>
+              </div>
+            </a>
+          </div>
+        
+      </section>
+      
+
+
+    <script src="//cdn.jsdelivr.net/npm/@waline/client"></script>
+    <div id="waline"></div>
+    <style>
+    #waline textarea {
+        box-sizing: border-box;
+        background: url("https://gitee.com/cungudafa/source/raw/master/img/gif/Sitich/Sitich2.gif") 100% 100% no-repeat;
+    }
+    </style>
+    <script>
+        Waline({
+              el: '#waline',
+              serverURL: 'https://commint-kytakvo93-kafudolly.vercel.app/',
+              pageSize: '10',
+              lang: 'zh-CN',
+              requiredFields: ['nick','mail'], //设置必填项
+              placeholder: '祝开开心心！',
+              visitor: 'false',
+              emoji: [
+                  'https://cdn.jsdelivr.net/gh/walinejs/emojis@1.0.0/tieba',
+                  'https://cdn.jsdelivr.net/gh/walinejs/emojis@1.0.0/bilibili',
+                  'https://cdn.jsdelivr.net/gh/walinejs/emojis@1.0.0/weibo',
+              ],
+              avatar: 'mp',
+              dark: 'auto',
+            });
+    </script>
+
+
+      <section class="author-profile">
+        <div class="info" itemprop="author" itemscope="" itemtype="https://schema.org/Person">
+          <a href="" class="profile gravatar"><img src="https://cdn.jsdelivr.net/gh/kafudolly/cdn/img/custom/avater.jpg" itemprop="image" alt="喵哈羊" height="70" width="70"></a>
+          <div class="meta">
+            <span class="title">Author</span>
+            <h3 itemprop="name">
+            <a href="" itemprop="url" rel="author">喵哈羊</a>
+            </h3>
+          </div>
         </div>
-      </article>
-    </div>
-  </div>
+        <hr>
+        <p><i class="iconfont icon-write"></i></p>
+      </section>
+    </main><!-- #main -->
+  </div><!-- #primary -->
 </div>
+
+
 
     </div>    
     <div class="ins-search">
